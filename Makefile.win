@@ -1,0 +1,49 @@
+# Project: Projeto1
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = main.o insertionsort.o auxiliares.o mergesort.o quicksort.o heapsort.o timsort.o dualpivotquicksort.o
+LINKOBJ  = main.o insertionsort.o auxiliares.o mergesort.o quicksort.o heapsort.o timsort.o dualpivotquicksort.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = Trabalho1.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+insertionsort.o: insertionsort.cpp
+	$(CPP) -c insertionsort.cpp -o insertionsort.o $(CXXFLAGS)
+
+auxiliares.o: auxiliares.cpp
+	$(CPP) -c auxiliares.cpp -o auxiliares.o $(CXXFLAGS)
+
+mergesort.o: mergesort.cpp
+	$(CPP) -c mergesort.cpp -o mergesort.o $(CXXFLAGS)
+
+quicksort.o: quicksort.cpp
+	$(CPP) -c quicksort.cpp -o quicksort.o $(CXXFLAGS)
+
+heapsort.o: heapsort.cpp
+	$(CPP) -c heapsort.cpp -o heapsort.o $(CXXFLAGS)
+
+timsort.o: timsort.cpp
+	$(CPP) -c timsort.cpp -o timsort.o $(CXXFLAGS)
+
+dualpivotquicksort.o: dualpivotquicksort.cpp
+	$(CPP) -c dualpivotquicksort.cpp -o dualpivotquicksort.o $(CXXFLAGS)
