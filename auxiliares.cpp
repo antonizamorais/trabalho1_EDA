@@ -28,3 +28,10 @@ void printArray(int arr[], int n)
 	printf("\n");  
 } 
 
+float mediaValoresArray(float arr[], int n) {
+    float soma = 0;
+    for(int i = 0; i < n; i++){
+    	soma += arr[i];
+	}
+	return soma/n;
+}

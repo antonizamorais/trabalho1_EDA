@@ -4,8 +4,8 @@
 CPP      = g++.exe -D__DEBUG__
 CC       = gcc.exe -D__DEBUG__
 WINDRES  = windres.exe
-OBJ      = main.o insertionsort.o auxiliares.o mergesort.o quicksort.o heapsort.o timsort.o dualpivotquicksort.o
-LINKOBJ  = main.o insertionsort.o auxiliares.o mergesort.o quicksort.o heapsort.o timsort.o dualpivotquicksort.o
+OBJ      = main.o insertionsort.o auxiliares.o mergesort.o quicksort.o heapsort.o timsort.o dualpivotquicksort.o mergeHibrido.o quickHibrido.o
+LINKOBJ  = main.o insertionsort.o auxiliares.o mergesort.o quicksort.o heapsort.o timsort.o dualpivotquicksort.o mergeHibrido.o quickHibrido.o
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -47,3 +47,9 @@ timsort.o: timsort.cpp
 
 dualpivotquicksort.o: dualpivotquicksort.cpp
 	$(CPP) -c dualpivotquicksort.cpp -o dualpivotquicksort.o $(CXXFLAGS)
+
+mergeHibrido.o: mergeHibrido.cpp
+	$(CPP) -c mergeHibrido.cpp -o mergeHibrido.o $(CXXFLAGS)
+
+quickHibrido.o: quickHibrido.cpp
+	$(CPP) -c quickHibrido.cpp -o quickHibrido.o $(CXXFLAGS)

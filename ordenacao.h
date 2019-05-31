@@ -34,9 +34,14 @@ void timSort(int arr[], int n);
 void mergeH(int arr[], int l, int m, int r);
 void insertionSortH(int arr[], int left, int right);
 
+void hibridoMergeInsertion(int arr[], int p, int r, int size);
+
+void hibridoQuickInsertion(int arr[], int p, int r, int size);
+
 /* --------------------------------- FUNÇÕES AUXIRIARES -------------------------------------------*/
 void preencheArray(int n, int arr[]);
 void printArray(int arr[], int n);
+float mediaValoresArray(float arr[], int n);
 void swap(int* a, int* b);
 
 #endif
